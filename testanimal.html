@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta http-equiv=Content-Type content="text/html; charset=utf-8">
+    
+    </head>
+<body>
+<h2>JavaScript Can Validate Input</h2>
+<p>ป้อนค่าเป็นตัวเลข 2 ชุด ระหว่าง 1 ถึง 10: </p>
+ป้อนค่า x<input id="numb" size=3/>
+<button type="button" onclick="myF()">Submit</button>
+<p id="d"></p>
+<script>
+function myF(){
+    var x, text;
+    x = document.getElementById("numb").value;
+    if(isNaN(x) || x < 1 || x > 10){
+        document.getElementById("d").innerHTML = "<img src=animal/animalsNumber/0.jpg width=114 height=114>";
+    
+    }else{
+        text = "X Input OK";
+    }
+    document.getElementById("d").innerHTML = text;
+}
+</script>
+
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+<head>
+    <meta http-equiv=Content-Type content="text/html; charset=utf-8">
+</head>
+<body>
+<p สุ่มเลข 0-9></p>
+<p id="ran1"></p>
+<p id="ran2"></p>
+<p id="ran3"></p>
+<p id="ran4"></p>
+    
+<button onclick="random()">สุ่มเลข</button>
+
+<script>
+    var x,y,z = 0;
+    function random(){
+    x=Math.floor(Math.random()*9);
+    y=Math.floor(Math.random()*9);
+    z=Math.floor(Math.random()*9);
+    document.getElementById("ran1").innerHTML=
+    "<table border='1' bordercolor= black <tr><td>"+x+"</td><td>"+y+"</td><td>"+z+"</td></tr></table>";
+    
+    }
+    setTimeout("sx(this);",1000)
+    function sx(){
+    x = document.getElementById("ran2").innerHTML = 
+    "<OBJECT DATA='SoundNumber/"+x+".wav' TYPE='audio/wav' TITLE='description' WIDTH=0 HEIGHT=0>";
+    }
+    setTimeout("sy(this);",2000)
+    function sy(){
+    y = document.getElementById("ran3").innerHTML = 
+    "<OBJECT DATA='SoundNumber/"+y+".wav' TYPE='audio/wav' TITLE='description' WIDTH=0 HEIGHT=0>";
+    }
+    setTimeout("sz(this);",3000)
+    function sz(){
+    z = document.getElementById("ran4").innerHTML = 
+    "<OBJECT DATA='SoundNumber/"+z+".wav' TYPE='audio/wav' TITLE='description' WIDTH=0 HEIGHT=0>";
+    }
+    
+
+    
+</script>
+</body>
+</html>
